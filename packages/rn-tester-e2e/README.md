@@ -44,7 +44,7 @@ Now, depending on the platform, there are some specific steps
 3. Build the app via XCode.
 4. Find the **RNTester.app** in `~/Library/Developer/Xcode/DerivedData/RNTesterPods-{id}/Build/Products/Debug-iphonesimulator`
 5. Copy the app to the following directory `/react-native/packages/rn-tester-e2e/apps`.
-
+6. change its name name to: `rn-tester.app`
 
 #### Building for Android
 
@@ -60,7 +60,7 @@ Now, depending on the platform, there are some specific steps
 
     *Note: Building for the first time can take a while.*
 
-3. Find the **RNTester.app** in `~/react-native/packages/rn-tester/android/app/build/outputs/apk/jsc/debug`
+3. Find the **RNTester.app** in `~/react-native/packages/rn-tester/android/app/build/outputs/apk/hermes/debug`
 4. copy the app `app-*-x86_64-debug.apk` to the following directory `/react-native/packages/rn-tester-e2e/apps`
 5. change its name name to: `rn-tester.apk`
 
