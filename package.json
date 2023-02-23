@@ -44,7 +44,7 @@
     "align-package-versions": "node ./scripts/monorepo/align-package-versions.js"
   },
   "workspaces": [
-    "packages/*"
+    "packages/!(rn-tester-e2e)/**"
   ],
   "peerDependencies": {
     "react": "18.2.0"
