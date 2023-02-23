@@ -106,7 +106,7 @@
     "align-package-versions": "node ./scripts/monorepo/align-package-versions.js"
   },
   "workspaces": [
-    "packages/*",
+    "packages/!(rn-tester-e2e)/**",
     "repo-config"
   ],
   "peerDependencies": {
