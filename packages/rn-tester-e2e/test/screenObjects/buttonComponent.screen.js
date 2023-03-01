@@ -31,10 +31,7 @@ class ButtonComponentScreen {
     android: '//android.widget.Button[@text="OK"]',
   });
 
-  btnCancelElement = Utils.platformSelect({
-    ios: '[label="Press to cancel your application!"]',
-    android: '//android.widget.Button[@resource-id="cancel_button"]',
-  });
+  btnCancelElement = '~cancel_button';
 
   submitAlertBoxElement = Utils.platformSelect({
     ios: '[label="Your application has been submitted!"]',

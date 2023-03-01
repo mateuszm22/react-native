@@ -15,6 +15,20 @@ const React = require('react');
 const {Alert, Button, View, StyleSheet} = require('react-native');
 const {RNTesterThemeContext} = require('../../components/RNTesterTheme');
 
+export const testProps = (testID: string) => {
+  if (Platform.OS === 'ios') {
+    return {
+      testID,
+      accessible: false,
+    };
+  }
+
+  return {
+    accessible: true,
+    accessibilityLabel: testID,
+  };
+};
+
 function onButtonPress(buttonName: string) {
   Alert.alert(`Your application has been ${buttonName}!`);
 }
@@ -52,10 +66,10 @@ exports.examples = [
             return (
               <Button
                 onPress={() => onButtonPress('cancelled')}
-                testID="cancel_button"
+                {...testProps('cancel_button')}
                 color={theme.SystemRedColor}
                 title="Cancel Application"
-                accessibilityLabel="Press to cancel your application!"
+                //accessibilityLabel="Press to cancel your application!"
               />
             );
           }}
