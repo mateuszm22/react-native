@@ -10,6 +10,8 @@
 
 'use strict';
 
+import {testProps} from '../../utils/RNTesterTestProps';
+
 const React = require('react');
 
 const {Alert, Button, View, StyleSheet} = require('react-native');
@@ -33,9 +35,9 @@ exports.examples = [
       return (
         <Button
           onPress={() => onButtonPress('submitted')}
-          testID="button_default_styling"
+          {...testProps('button_default_styling')}
           title="Submit Application"
-          accessibilityLabel="Press to submit your application!"
+          // accessibilityLabel="Press to submit your application!"
         />
       );
     },
@@ -52,10 +54,10 @@ exports.examples = [
             return (
               <Button
                 onPress={() => onButtonPress('cancelled')}
-                testID="cancel_button"
+                {...testProps('cancel_button')}
                 color={theme.SystemRedColor}
                 title="Cancel Application"
-                accessibilityLabel="Press to cancel your application!"
+                // accessibilityLabel="Press to cancel your application!"
               />
             );
           }}

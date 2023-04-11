@@ -16,15 +16,7 @@ class ButtonComponentScreen {
     android: '//android.view.ViewGroup/android.widget.TextView[@text="Button"]',
   });
 
-  btnSubmitElement = Utils.platformSelect({
-    ios: '[label="Press to submit your application!"]',
-    android: '//android.widget.Button[@resource-id="button_default_styling"]',
-  });
-
-  inputSearchElement = Utils.platformSelect({
-    ios: '[name="example_search"]',
-    android: '//android.widget.EditText[@resource-id="example_search"]',
-  });
+  btnSubmitElement = '~button_default_styling';
 
   btnOKElement = Utils.platformSelect({
     ios: '[label="OK"]',
